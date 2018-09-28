@@ -1,0 +1,18 @@
+<HTML>
+	<HEAD>
+		<TITLE>Create</TITLE>
+	</HEAD>
+	<BODY>
+		<h2>{{ title }} Page</h2>
+		<HR />
+		<BR />
+		<FORM method="post" action=''>{% csrf_token %}
+		{{ form.as_p }}
+		<p>
+			<input type="submit" value="Add" />
+		</p>
+		<br />
+		<hr />
+		<A href="/posts">Back</A>
+	</BODY>
+</HTML>

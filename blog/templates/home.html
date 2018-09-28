@@ -1,0 +1,32 @@
+<HTML>
+	<HEAD>
+		<TITLE>List page</TITLE>
+	</HEAD>
+	<BODY>
+		<H2>{{ Title }} Page</H2>
+		<HR />
+		<BR />
+		<A href="/posts/create/">Add New Post</A>
+		<BR />
+		<TABLE border='1'>
+			<TR>
+				<TH>ID</TH>
+				<TH>NAME</TH>
+				<TH>DATE OF BIRTH</TH>
+				<TH>PHONE</TH>
+				<TH>ADDRESS</TH>
+				
+			</TR>
+			{% for obj in object_list %}
+				<TR>
+					<TD>{{ obj.id }}</TD>
+					<TD>{{ obj.name }}</TD>
+					<TD>{{ obj.dateofbirth }}</TD>
+					<TD>{{ obj.phone }}</TD>
+					<TD>{{ obj.address }}</TD>
+					
+				</TR>
+			{% endfor %}
+		</TABLE>
+	</BODY>
+</HTML>
